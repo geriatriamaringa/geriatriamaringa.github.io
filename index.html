@@ -71,40 +71,6 @@ img.emoji {
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.geriatriamaringa.com.br/wp-includes/wlwmanifest.xml" /> 
 
 <script type="text/javascript">
-(function(url){
-	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
-	var addEvent = function(evt, handler) {
-		if (window.addEventListener) {
-			document.addEventListener(evt, handler, false);
-		} else if (window.attachEvent) {
-			document.attachEvent('on' + evt, handler);
-		}
-	};
-	var removeEvent = function(evt, handler) {
-		if (window.removeEventListener) {
-			document.removeEventListener(evt, handler, false);
-		} else if (window.detachEvent) {
-			document.detachEvent('on' + evt, handler);
-		}
-	};
-	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
-	var logHuman = function() {
-		if (window.wfLogHumanRan) { return; }
-		window.wfLogHumanRan = true;
-		var wfscr = document.createElement('script');
-		wfscr.type = 'text/javascript';
-		wfscr.async = true;
-		wfscr.src = url + '&r=' + Math.random();
-		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
-		for (var i = 0; i < evts.length; i++) {
-			removeEvent(evts[i], logHuman);
-		}
-	};
-	for (var i = 0; i < evts.length; i++) {
-		addEvent(evts[i], logHuman);
-	}
-})('//www.geriatriamaringa.com.br/?wordfence_lh=1&hid=374379AB2E7DAD34A474C25B53C7A977');
-</script>	<script type="text/javascript">
 	jQuery(document).ready(function() {
 		jQuery('#slider').nivoSlider({
 			effect: 'slideInLeft',
@@ -112,10 +78,6 @@ img.emoji {
 						//controlNavThumbs: true,
 			beforeChange: function(){
 				jQuery('.nivo-caption h2').addClass('nivo-caption-mate');
-				jQuery('.inline-slide-text').fadeOut(500);
-				jQuery('.inline-slide-text').css({'opacity':'100','display':'inline'});
-				jQuery('.readmore').fadeOut(500);
-				jQuery('.readmore').css({'opacity':'100','display':'table'});
 			},
 			pauseTime: 4200		});
 	});
@@ -297,9 +259,6 @@ jQuery(document).ready(function(){
 		<div id="footer2">
 			<div id="footer2-inside">
 			<div id="site-copyright"><div class="footer-container">
-  <div class="logo-footer">
-    <img src="images/logoTha.jpg">
-  </div>
   <div class="text-footer">
   Dra. Thaís Cano Miranda Nóbrega CRM  20420 <br />
   Endereço:  Av. Carlos Gomes, 602 - Zona 05 - Maringá - PR <br />
